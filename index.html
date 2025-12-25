@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Site avec Navbar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="#home">MonSite</a>
+
+      <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul id="primary-navigation" class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="section"> 
+      <h1>Home</h1>
+      <p>Bienvenue sur la page d'accueil.</p>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="profile">
+          <img src="https://via.placeholder.com/160" alt="Photo de profil" class="profile-img">
+        </div>
+        <div class="about-content">
+          <h2>À propos</h2>
+          <p>Je suis développeur web passionné par la création d'interfaces réactives et accessibles. J'aime résoudre des problèmes complexes et transformer des idées en produits concrets.</p>
+          <p>Compétences principales :</p>
+          <ul class="skills">
+            <li>HTML / CSS</li>
+            <li>JavaScript (ES6+)</li>
+            <li>Responsive Design</li>
+            <li>Accessibilité</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="container">
+        <h2>Work</h2>
+        <p>Quelques projets récents :</p>
+        <div class="work-grid">
+          <article class="project-card">
+            <h3>Project One</h3>
+            <p>Application web responsive pour gérer des tâches.</p>
+            <a href="#" class="btn small" target="_blank" rel="noopener">Voir</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Project Two</h3>
+            <p>Site vitrine optimisé pour la performance.</p>
+            <a href="#" class="btn small" target="_blank" rel="noopener">Voir</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Project Three</h3>
+            <p>Prototype d'interface utilisateur avec animations CSS.</p>
+            <a href="#" class="btn small" target="_blank" rel="noopener">Voir</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" class="section">
+      <div class="container">
+        <h2>Resume</h2>
+        <p>Téléchargez mon CV ou consultez-le en ligne.</p>
+        <p class="resume-actions">
+          <a href="resume.pdf" class="btn" download>Télécharger le CV</a>
+          <a href="resume.pdf" class="btn ghost" target="_blank" rel="noopener">Voir en ligne</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Remplissez le formulaire ci‑dessous pour me contacter — je réponds généralement sous 48 heures.</p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-row">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject">
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Envoyer</button>
+          </div>
+
+          <p id="contact-success" class="contact-success" role="status" aria-live="polite" tabindex="-1" hidden>Merci ! Votre message a été envoyé.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#home">MonSite</a>
+        <p class="footer-note">Créé avec ❤ — <span id="footer-year">2025</span></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-actions">
+        <a href="resume.pdf" class="btn small" download>Télécharger CV</a>
+      </div>
+    </div>
+    <button id="back-to-top" class="back-to-top" aria-label="Remonter en haut">↑</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
